@@ -73,48 +73,49 @@ EcoScan-AI/
 ```bash
 git clone https://github.com/tuonome/EcoScan-AI.git
 cd EcoScan-AI
-
+```
 
 ⸻
 
 2️⃣ Crea un ambiente virtuale Python
 
+```bash
 python3 -m venv env
 source env/bin/activate
-
+```
 Su Windows:
-
+```bash 
 env\Scripts\activate
 
-
+```
 ⸻
 
 3️⃣ Installa le dipendenze Python
 
+``` bash  
 pip install -r requirements.txt
-
-
+```
 ⸻
 
 4️⃣ Installa Ollama
 
 macOS / Linux
-
+``` bash
 curl -fsSL https://ollama.com/install.sh | sh
-
+```
 Windows
 
 Scarica da:
-
+```bash
 https://ollama.com/download
-
+```
 
 ⸻
 
 5️⃣ Scarica il modello LLaVA
 
 LLaVA 7B (consigliato):
-
+```bash
 ollama pull llava
 
 Alternative:
@@ -122,21 +123,23 @@ Alternative:
 ollama pull llava:13b
 ollama pull llava-phi
 ollama pull llava-llama3
-
+```
 
 ⸻
 
 6️⃣ Avvia Ollama in background
 
+```bash
 ollama serve
-
+```
 
 ⸻
 
 7️⃣ Avvia EcoScan-AI
 
+```bash
 python3 main.py
-
+```
 
 ⸻
 

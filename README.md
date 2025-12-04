@@ -1,48 +1,58 @@
 
-
 # 🌿 EcoScan-AI — Intelligent Waste Detection (Open Source)
 
-EcoScan è unAI locale, gratuita, open-source per analizzare rifiuti, degrado urbano e aiutare l’ambiente.
+EcoScan è un'AI locale, gratuita, open-source per analizzare rifiuti, degrado urbano e aiutare l’ambiente.  
 Works 100% offline, powered by LLaVA models via Ollama.
 
-⸻
+---
 
-🇮🇹 (Italiano)
+# 🇮🇹 Italiano
 
-EcoScan-AI è un sistema di intelligenza artificiale che analizza immagini contenenti rifiuti e ne valuta la gravità.
-Tutto gira localmente sul tuo PC, senza API, senza costi e senza inviare dati online.
+EcoScan-AI è un sistema di intelligenza artificiale che analizza immagini contenenti rifiuti, ne valuta la gravità e fornisce un’analisi ambientale completa.
 
-🔍 Cosa può fare:
-	•	Riconoscere rifiuti in una foto
-	•	Valutare quantità, tipo e gravità
-	•	Generare spiegazioni dettagliate
-	•	Analizzare anche testo + immagine
-	•	Funzionare tramite bot Telegram
-	•	(Opzionale) Chiedere il comune e preparare una segnalazione automatica
-	•	Completamente open-source e modificabile
+Funziona **totalmente in locale**, sul tuo PC:  
+✔ Nessuna API esterna  
+✔ Nessun costo  
+✔ Nessun invio di foto online  
 
-Perfetto per progetti ambientali, civic-tech, scuole, enti locali o analisi urbane.
+### 🔍 Cosa può fare:
 
-⸻
+• Riconoscere rifiuti in una foto  
+• Valutare quantità, tipo e gravità  
+• Generare spiegazioni dettagliate  
+• Analizzare testo + immagini insieme  
+• Funzionare tramite bot Telegram  
+• (Opzionale) Chiedere il comune dello scatto  
+• (Opzionale) Preparare una segnalazione automatica al comune  
+• Completamente open-source e modificabile  
 
-🇬🇧 (English)
+Perfetto per progetti ambientali, civic-tech, scuole, enti locali e analisi urbane.
 
-EcoScan-AI is a local AI system designed to analyze waste in photos and determine pollution severity.
-Runs fully offline, using LLaVA models through Ollama.
+---
 
-🔍 Features:
-	•	Waste detection in images
-	•	Severity and category classification
-	•	Text + image reasoning
-	•	Optional Telegram bot integration
-	•	Optional municipality lookup for automated reporting
-	•	Fully open-source, no external API required
+# 🇬🇧 English Version
 
-Ideal for environmental monitoring, civic-tech solutions, schools, and open AI research.
+EcoScan-AI is a local AI system that analyzes photos containing waste and determines the environmental severity.
 
-⸻
+Everything runs **fully offline** on your machine:  
+✔ No API  
+✔ No cloud  
+✔ No data sent online  
 
-📁 Project Structure
+### 🔍 Features:
+
+• Waste detection in images  
+• Severity and category classification  
+• Text + image deep analysis  
+• Optional Telegram bot integration  
+• Optional municipality auto-reporting (email)  
+• Fully open-source & customizable  
+
+Ideal for environmental monitoring, civic-tech, schools, and AI research.
+
+---
+
+# 📁 Project Structure
 
 EcoScan-AI/
 │── main.py
@@ -54,28 +64,32 @@ EcoScan-AI/
 │── /images
 │── /utils
 
+---
 
-⸻
+# ⚙️ Installazione
 
-⚙️ Installazione
+## 1️⃣ Clona il progetto
 
-1️⃣ Clona il progetto
-
+```bash
 git clone https://github.com/tuonome/EcoScan-AI.git
 cd EcoScan-AI
 
 
 ⸻
 
-2️⃣ Crea l’ambiente Python
+2️⃣ Crea un ambiente virtuale Python
 
 python3 -m venv env
 source env/bin/activate
 
+Su Windows:
+
+env\Scripts\activate
+
 
 ⸻
 
-3️⃣ Installa dipendenze
+3️⃣ Installa le dipendenze Python
 
 pip install -r requirements.txt
 
@@ -90,13 +104,16 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 Windows
 
-Scarica da https://ollama.com/download
+Scarica da:
+
+https://ollama.com/download
+
 
 ⸻
 
-5️⃣ Scarica il modello AI
+5️⃣ Scarica il modello LLaVA
 
-Per usare LLaVA versione 7B:
+LLaVA 7B (consigliato):
 
 ollama pull llava
 
@@ -127,35 +144,35 @@ python3 main.py
 
 ➤ Analisi di testo
 
-Scrivi un messaggio e l’AI risponde.
+Scrivi un messaggio nel terminale e l’AI risponderà.
 
 ➤ Analisi di immagini
 
-Inserisci il percorso di un’immagine locale:
+Inserisci il percorso dell’immagine:
 
-/images/scatto.jpg
+images/scatto.jpg
 
-Oppure, con il bot Telegram, invia semplicemente una foto.
+Con bot Telegram: basta inviare una foto.
 
-➤ Modalità ambiente
+➤ Modalità “Ambiente”
 
 L’AI riconosce:
-	•	presenza di rifiuti
-	•	quantità
-	•	gravità
-	•	suggerimenti di intervento
 
-Se trova un accumulo grave, allora:
-	1.	chiede il comune dello scatto
-	2.	cerca l’email nel file comuni.json
-	3.	prepara automaticamente la segnalazione ambientale (opzionale da attivare)
+• Presenza di rifiuti
+• Quantità (bassa, media, alta)
+• Gravità
+• Suggerimenti reali per intervenire
+
+Se viene rilevato un accumulo grave, l’AI:
+	1.	Chiede il comune dove è stata scattata la foto
+	2.	Cerca l’email nel file comuni.json
+	3.	Prepara automaticamente una segnalazione ambientale (opzionale)
 
 ⸻
 
 📧 Automated Reporting (Optional)
 
-Il file comuni.json contiene le email dei comuni.
-Può essere esteso manualmente o automaticamente.
+Il file comuni.json contiene le email dei comuni italiani.
 
 Esempio:
 
@@ -165,20 +182,22 @@ Esempio:
   "Roma": "segnalazioni.ambiente@comune.roma.it"
 }
 
+Puoi estendere il file con quanti comuni vuoi.
 
 ⸻
 
 👨‍💻 Crediti
 
-Creato da Andrea (17 anni)
+Creato da Ares (17 anni)
 ✔ Appassionato di AI, cybersecurity e sviluppo open-source
-✔ Focus su progetti etici e utili alla società
+✔ Focus su progetti etici, utili e accessibili
+✔ Basato su LLaVA + Ollama
 
 ⸻
 
 📜 Licenza — MIT
 
-MIT License  
+MIT License
 Copyright (...)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy...
@@ -191,17 +210,19 @@ Permission is hereby granted, free of charge, to any person obtaining a copy...
 Pull request e miglioramenti sono ben accetti!
 
 Puoi contribuire con:
-	•	nuovi modelli AI
-	•	dataset di addestramento
-	•	aggiunta comuni
-	•	miglioramento logica ambientale
-	•	integrazioni API open-data
+
+• Nuovi modelli AI
+• Dataset ambientali
+• Aggiunta email dei comuni
+• Miglioramento logica di analisi
+• Integrazioni open-data
+• Funzionalità nel bot Telegram
 
 ⸻
 
-🌱 Perché esiste EcoScan-AI?
+🌱 Perché EcoScan-AI?
 
 Per dimostrare che l’AI non deve essere costosa né centralizzata:
-può anche essere libera, locale e al servizio dell’ambiente.
+può essere libera, locale e al servizio dell’ambiente.
 
-⸻
+---

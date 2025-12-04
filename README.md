@@ -11,6 +11,7 @@ EcoScan-AI è un sistema di intelligenza artificiale che analizza immagini conte
 
 Funziona **totalmente in locale**, sul tuo PC:  
 Per l'invio delle foto all'IA bisogna utilizzare il Bot telegram "EcoScanAI".
+
 ✔ Nessuna API esterna  
 ✔ Nessun costo  
 ✔ Nessun invio di foto online  

@@ -1,4 +1,3 @@
-
 # 🌿 EcoScan-AI — Intelligent Waste Detection (Open Source)
 
 EcoScan è un'AI locale, gratuita, open-source per analizzare rifiuti, degrado urbano e aiutare l’ambiente.  
@@ -32,9 +31,9 @@ Perfetto per progetti ambientali, civic-tech, scuole, enti locali e analisi urba
 
 # 🇬🇧 English Version
 
-EcoScan-AI is a local AI system that analyzes photos containing waste and determines the environmental severity.
+EcoScan-AI is a local AI system that analyzes images containing waste and determines environmental severity.
 
-Everything runs **fully offline** on your machine:  
+Runs **fully offline**:  
 ✔ No API  
 ✔ No cloud  
 ✔ No data sent online  
@@ -42,13 +41,11 @@ Everything runs **fully offline** on your machine:
 ### 🔍 Features:
 
 • Waste detection in images  
-• Severity and category classification  
-• Text + image deep analysis  
-• Optional Telegram bot integration  
-• Optional municipality auto-reporting (email)  
+• Severity classification  
+• Text + image multimodal analysis  
+• Optional Telegram bot  
+• Optional municipality auto-reporting  
 • Fully open-source & customizable  
-
-Ideal for environmental monitoring, civic-tech, schools, and AI research.
 
 ---
 
@@ -57,8 +54,8 @@ Ideal for environmental monitoring, civic-tech, schools, and AI research.
 EcoScan-AI/
 │── main.py
 │── analyzer.py
-│── telegram_bot.py        (opzionale)
-│── comuni.json            (email dei comuni)
+│── telegram_bot.py
+│── comuni.json
 │── requirements.txt
 │── README.md
 │── /images
@@ -69,7 +66,6 @@ EcoScan-AI/
 # ⚙️ Installazione
 
 ## 1️⃣ Clona il progetto
-
 ```bash
 git clone https://github.com/tuonome/EcoScan-AI.git
 cd EcoScan-AI
@@ -83,24 +79,24 @@ cd EcoScan-AI
 python3 -m venv env
 source env/bin/activate
 ```
-Su Windows:
-```bash 
+Windows:
+```bash
 env\Scripts\activate
-
 ```
+
 ⸻
 
 3️⃣ Installa le dipendenze Python
-
-``` bash  
+```bash
 pip install -r requirements.txt
 ```
+
 ⸻
 
 4️⃣ Installa Ollama
 
 macOS / Linux
-``` bash
+```bash
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 Windows
@@ -127,8 +123,7 @@ ollama pull llava-llama3
 
 ⸻
 
-6️⃣ Avvia Ollama in background
-
+6️⃣ Avvia Ollama
 ```bash
 ollama serve
 ```
@@ -136,7 +131,6 @@ ollama serve
 ⸻
 
 7️⃣ Avvia EcoScan-AI
-
 ```bash
 python3 main.py
 ```
@@ -147,36 +141,34 @@ python3 main.py
 
 ➤ Analisi di testo
 
-Scrivi un messaggio nel terminale e l’AI risponderà.
+Scrivi un messaggio nel terminale per ricevere una risposta dall’AI.
 
 ➤ Analisi di immagini
 
-Inserisci il percorso dell’immagine:
+Specifica il percorso dell’immagine:
 
 images/scatto.jpg
 
-Con bot Telegram: basta inviare una foto.
+Oppure usa il bot Telegram per inviare direttamente una foto.
 
-➤ Modalità “Ambiente”
+➤ Analisi ambientale
 
-L’AI riconosce:
+L’AI identifica:
+	•	presenza di rifiuti
+	•	quantità
+	•	gravità
+	•	suggerimenti per l’intervento
 
-• Presenza di rifiuti
-• Quantità (bassa, media, alta)
-• Gravità
-• Suggerimenti reali per intervenire
-
-Se viene rilevato un accumulo grave, l’AI:
-	1.	Chiede il comune dove è stata scattata la foto
-	2.	Cerca l’email nel file comuni.json
-	3.	Prepara automaticamente una segnalazione ambientale (opzionale)
+Se rileva accumulo grave, attiva la procedura:
+	1.	Chiede il comune
+	2.	Cerca email in comuni.json
+	3.	Prepara una segnalazione (opzionale)
 
 ⸻
 
 📧 Automated Reporting (Optional)
 
-Il file comuni.json contiene le email dei comuni italiani.
-
+Il file comuni.json contiene email dei comuni italiani.
 Esempio:
 
 {
@@ -185,47 +177,58 @@ Esempio:
   "Roma": "segnalazioni.ambiente@comune.roma.it"
 }
 
-Puoi estendere il file con quanti comuni vuoi.
+You can expand this list anytime.
+(Puoi ampliarlo quando vuoi.)
 
 ⸻
 
-👨‍💻 Crediti
+👨‍💻 Crediti / Credits
 
 Creato da Ares (17 anni)
-✔ Appassionato di AI, cybersecurity e sviluppo open-source
-✔ Focus su progetti etici, utili e accessibili
+Created by Ares (17 y/o)
+
+✔ Appassionato di AI, cybersecurity e open-source
+✔ Focus su progetti etici e utili
 ✔ Basato su LLaVA + Ollama
 
 ⸻
 
-📜 Licenza — MIT
+📜 Licenza — MIT License
+
+Open-source. Free to use, modify and distribute.
 
 MIT License
 Copyright (...)
-
 Permission is hereby granted, free of charge, to any person obtaining a copy...
 
 
 ⸻
 
-🤝 Contribuire
+🤝 Contribuire / Contribute
 
-Pull request e miglioramenti sono ben accetti!
+💡 Pull requests are welcome.
+Puoi contribuire con / You can contribute by:
 
-Puoi contribuire con:
-
-• Nuovi modelli AI
-• Dataset ambientali
+• Miglioramenti all’AI
 • Aggiunta email dei comuni
-• Miglioramento logica di analisi
-• Integrazioni open-data
-• Funzionalità nel bot Telegram
+• Nuovi modelli supportati
+• Ottimizzazione codice
+• Documentazione
 
 ⸻
 
 🌱 Perché EcoScan-AI?
 
-Per dimostrare che l’AI non deve essere costosa né centralizzata:
-può essere libera, locale e al servizio dell’ambiente.
+** 🇮🇹 Perché l’AI non deve essere costosa o centralizzata.
+Può essere locale, libera e al servizio dell’ambiente.**
+
+** 🇬🇧 Because AI shouldn’t be expensive or locked behind cloud services.
+It can be local, open, and built to protect the environment.**
+
+⸻
+
+✨ EcoScan-AI è un piccolo progetto con un grande obiettivo: usare l’AI per migliorare il mondo, non per complicarlo.
+✨ EcoScan-AI is a small project with a big goal: using AI to help the world, not harm it.
 
 ---
+

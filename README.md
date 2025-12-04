@@ -5,7 +5,7 @@ Works 100% offline, powered by LLaVA models via Ollama.
 
 ---
 
-# 🇮🇹 Italiano
+# 🇮🇹 (ITA)
 
 EcoScan-AI è un sistema di intelligenza artificiale che analizza immagini contenenti rifiuti, ne valuta la gravità e fornisce un’analisi ambientale completa.
 
@@ -29,7 +29,7 @@ Perfetto per progetti ambientali, civic-tech, scuole, enti locali e analisi urba
 
 ---
 
-# 🇬🇧 English Version
+# 🇬🇧 (ENG)
 
 EcoScan-AI is a local AI system that analyzes images containing waste and determines environmental severity.
 
@@ -46,20 +46,6 @@ Runs **fully offline**:
 • Optional Telegram bot  
 • Optional municipality auto-reporting  
 • Fully open-source & customizable  
-
----
-
-# 📁 Project Structure
-
-EcoScan-AI/
-│── main.py
-│── analyzer.py
-│── telegram_bot.py
-│── comuni.json
-│── requirements.txt
-│── README.md
-│── /images
-│── /utils
 
 ---
 

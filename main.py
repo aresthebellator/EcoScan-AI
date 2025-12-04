@@ -8,7 +8,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes, ConversationHandler, CommandHandler
 
 # ------------------- CONFIG -------------------
-TELEGRAM_TOKEN = "8375572558:AAHYjfaNU0ldW1T_QnYMLnwZbsZIUtNgZ1w"
+TELEGRAM_TOKEN = ""
 LLAVA_MODEL = "llava"
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
